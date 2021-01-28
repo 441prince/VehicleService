@@ -15,7 +15,7 @@ public class DatabaseHelperService extends Service {
     /**
      * IAdd definition is below
      */
-    private final DatabaseHelper.Stub mBinder = new DatabaseHelper.Stub() {
+    private final DatabaseHelper2.Stub mBinder = new DatabaseHelper2.Stub() {
         @Override
         public int add(int num1, int num2) throws RemoteException {
             // TODO Auto-generated method stub
