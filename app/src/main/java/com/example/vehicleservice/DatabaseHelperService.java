@@ -4,7 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
-import com.example.vehicleservice.DatabaseHelperService;
+import android.widget.Toast;
 
 public class DatabaseHelperService extends Service {
     public IBinder onBind(Intent intent) {
@@ -17,9 +17,10 @@ public class DatabaseHelperService extends Service {
      */
     private final DatabaseHelper2.Stub mBinder = new DatabaseHelper2.Stub() {
         @Override
-        public int add(int num1, int num2) throws RemoteException {
+        public int add(int num1,int num2) throws RemoteException {
             // TODO Auto-generated method stub
-            return (num1 + num2);
+
+            return (num1+num2);
         }
     };
 }

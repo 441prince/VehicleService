@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VehicleService">
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.vehicleservice.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
         </activity>
 
         <service
-            android:name=".DatabaseHelperService"
+            android:name="com.example.vehicleservice.DatabaseHelperService"
             android:process=":remote">
             <intent-filter>
                 <action android:name="service.Calculator" />
