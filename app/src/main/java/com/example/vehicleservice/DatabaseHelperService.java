@@ -15,55 +15,55 @@ public class DatabaseHelperService extends Service {
     /**
      * IAdd definition is below
      */
-    private final DatabaseHelper2.Stub mBinder = new DatabaseHelper2.Stub() {
+    private final IDatabaseHelperInterface.Stub mBinder = new IDatabaseHelperInterface.Stub() {
         @Override
-        public int AutoButton(int num) throws RemoteException {
+        public int autoButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int AutoButtonOff(int num) throws RemoteException {
+        public int autoButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int AcButtonOn(int num) throws RemoteException {
+        public int acButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int AcButtonOff(int num) throws RemoteException {
+        public int acButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int DefrostButtonOn(int num) throws RemoteException {
+        public int frontDefrostButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int DefrostButtonOff(int num) throws RemoteException {
+        public int frontDefrostButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
 
-        public int RearDefrostButtonOn(int num) throws RemoteException {
+        public int rearDefrostButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int RearDefrostButtonOff(int num) throws RemoteException {
+        public int rearDefrostButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int UserButtonOn(int num) throws RemoteException {
+        public int userButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
         }
-        public int UserButtonOff(int num) throws RemoteException {
+        public int userButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
             return num;
 
