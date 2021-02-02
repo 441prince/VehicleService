@@ -4,7 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.widget.Toast;
+import com.example.vehicleservice.DatabaseHelperService;
 
 public class DatabaseHelperService extends Service {
     public IBinder onBind(Intent intent) {
@@ -17,10 +17,57 @@ public class DatabaseHelperService extends Service {
      */
     private final DatabaseHelper2.Stub mBinder = new DatabaseHelper2.Stub() {
         @Override
-        public int add(int num1,int num2) throws RemoteException {
+        public int AutoButton(int num) throws RemoteException {
             // TODO Auto-generated method stub
+            return num;
 
-            return (num1+num2);
         }
+        public int AutoButtonOff(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+        public int AcButtonOn(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+        public int AcButtonOff(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+        public int DefrostButtonOn(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+        public int DefrostButtonOff(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+
+        public int RearDefrostButtonOn(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+        public int RearDefrostButtonOff(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+        public int UserButtonOn(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+        public int UserButtonOff(int num) throws RemoteException {
+            // TODO Auto-generated method stub
+            return num;
+
+        }
+
     };
 }
