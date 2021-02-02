@@ -19,7 +19,7 @@
         </activity>
 
         <service
-            android:name="com.example.vehicleservice.DatabaseHelperService"
+            android:name=".DatabaseHelperService"
             android:process=":remote">
             <intent-filter>
                 <action android:name="service.Calculator" />
