@@ -4,11 +4,19 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
-import com.example.vehicleservice.DatabaseHelperService;
 
 public class DatabaseHelperService extends Service {
+
+    //private DatabaseServer databaseServer;
+    //private DatabaseHelperServer databaseHelperServer;
+    private DatabaseHelperServer2 databaseHelperServer2;
+    public String auto ="Off";
+
     public IBinder onBind(Intent intent) {
         // TODO Auto-generated method stub
+        //this.databaseServer = new DatabaseServer();
+        //this.databaseHelperServer = new DatabaseHelperServer(this);
+        this.databaseHelperServer2 = new DatabaseHelperServer2(this);
         return mBinder;
     }
 
@@ -16,14 +24,21 @@ public class DatabaseHelperService extends Service {
      * IAdd definition is below
      */
     private final IDatabaseHelperInterface.Stub mBinder = new IDatabaseHelperInterface.Stub() {
+
         @Override
         public int autoButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
+            //databaseServer.setAutoButtonOn("On");
+            auto="On";
+            databaseHelperServer2.insertAutoData(auto);
+
             return num;
 
         }
         public int autoButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
+            auto="On";
+            databaseHelperServer2.insertAutoData(auto);
             return num;
 
         }
