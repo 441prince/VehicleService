@@ -98,6 +98,12 @@ public class SeatHeaterTabDataService extends Service {
 
         public int allOffButton(int num) throws RemoteException{
             // TODO Auto-generated method stub
+            seatHeaterData.setDriver_seat("Off");
+            seatHeaterData.setPillion_seat("Off");
+            seatHeaterData.setThird_seat("Off");
+            seatHeaterData.setFourth_seat("Off");
+            seatHeaterData.setFifth_seat("Off");
+            databaseHelper.insertSeatTabData(seatHeaterData);
             return num;
         }
 
