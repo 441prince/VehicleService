@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VehicleService">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <service
             android:name=".MainDataService"
             android:process=":remote">
@@ -29,6 +29,13 @@
             android:process=":remote">
             <intent-filter>
                 <action android:name="service.FanTabData" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".SeatHeaterTabDataService"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="service.SeatHeaterTabData" />
             </intent-filter>
         </service>
     </application>
