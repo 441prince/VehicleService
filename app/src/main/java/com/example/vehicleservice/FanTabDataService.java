@@ -8,14 +8,11 @@ import android.os.RemoteException;
 public class FanTabDataService extends Service {
     private FanData fandata;
     private DatabaseHelper databaseHelper;
-    /*private DatabaseHelperServer2 databaseHelperServer2;
-    public String auto ="Off";*/
 
     public IBinder onBind(Intent intent) {
         // TODO Auto-generated method stub
         this.fandata = new FanData();
         this.databaseHelper = new DatabaseHelper(this);
-        //this.databaseHelperServer2 = new DatabaseHelperServer2(this);
         return mBinder;
     }
 
@@ -27,8 +24,6 @@ public class FanTabDataService extends Service {
         @Override
         public int faceDirectionButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
-            //auto="On";
-            //databaseHelperServer2.insertAutoData(auto);
             fandata.setAc_Direction("To Face On");
             databaseHelper.insertFanTabData(fandata);
             return num;
@@ -36,8 +31,6 @@ public class FanTabDataService extends Service {
         }
         public int faceDirectionButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
-            //auto="Off";
-            //databaseHelperServer2.insertAutoData(auto);
 
             fandata.setAc_Direction("Off");
             databaseHelper.insertFanTabData(fandata);

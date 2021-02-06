@@ -2,6 +2,7 @@ package com.example.vehicleservice;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
 
@@ -10,15 +11,22 @@ public class MainDataService extends Service {
     private MainData mainData;
     private DatabaseHelper databaseHelper;
 
-    /*private DatabaseHelperServer2 databaseHelperServer2;
-    public String auto ="Off";*/
-
     public IBinder onBind(Intent intent) {
         // TODO Auto-generated method stub
         this.mainData = new MainData();
         this.databaseHelper = new DatabaseHelper(this);
-        //this.databaseHelperServer2 = new DatabaseHelperServer2(this);
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                Intent intent1 = new Intent();
+                intent1.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+                intent1.setAction("com.example.vehicleservice");
+                intent1.putExtra("data", "Engine Full Charged");
+                sendBroadcast(intent1);
+            }
+        }, 20000);
+
         return mBinder;
+
     }
 
     /**
@@ -26,21 +34,18 @@ public class MainDataService extends Service {
      */
     private final IMainDataInterface.Stub mBinder = new IMainDataInterface.Stub() {
 
+
         @Override
         public int autoButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
-            //auto="On";
-            //databaseHelperServer2.insertAutoData(auto);
             mainData.setAuto("On");
             databaseHelper.insertMainData(mainData);
+
             return num;
 
         }
         public int autoButtonOff(int num) throws RemoteException {
             // TODO Auto-generated method stub
-            //auto="Off";
-            //databaseHelperServer2.insertAutoData(auto);
-
             mainData.setAuto("Off");
             databaseHelper.insertMainData(mainData);
             return num;
@@ -176,5 +181,7 @@ public class MainDataService extends Service {
 
         }
 
+
     };
+
 }

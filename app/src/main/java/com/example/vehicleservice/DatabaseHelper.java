@@ -37,12 +37,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_FOURTH_SEAT = "fourth_seat";
     private static final String COLUMN_FIFTH_SEAT = "fifth_seat";
 
-    /*private static final String TABLE_NAME4 ="preset_data_table";
-    public static final String COL_1 ="ID";
-    public static final String COL_2 ="FANSPEED";
-    public static final String COL_3 ="ACSTATE";
-    public static final String COL_4 ="TEMPERATURE";*/
-
     private String MAIN_DATA_TABLE = "CREATE TABLE main(main_id INTEGER PRIMARY KEY AUTOINCREMENT,auto TEXT,ac TEXT,left_seat TEXT,fan TEXT,right_seat TEXT,front_defrost TEXT,rear_defrost TEXT,dog_mode TEXT,camp_mode TEXT,user_mode TEXT)";
     private String CREATE_FAN_TAB_DATA_TABLE = "CREATE TABLE fan(first_tab_id INTEGER PRIMARY KEY AUTOINCREMENT,ac_direction TEXT,max_ac TEXT,air_circulate TEXT,bio_hazard TEXT,rear_fan TEXT,fan_speed INTEGER)";
     private String CREATE_SEAT_TAB_DATA_TABLE = "CREATE TABLE seat(second_tab_id INTEGER PRIMARY KEY AUTOINCREMENT,driver_seat TEXT ,pillion_seat TEXT,third_seat TEXT,fourth_seat TEXT,fifth_seat TEXT)";
@@ -57,7 +51,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(MAIN_DATA_TABLE);
         db.execSQL(CREATE_FAN_TAB_DATA_TABLE);
         db.execSQL(CREATE_SEAT_TAB_DATA_TABLE );
-        //db.execSQL("create table "+TABLE_NAME4 +"(ID INTEGER PRIMARY KEY AUTOINCREMENT,FANSPEED INTEGER,ACSTATE TEXT,TEMPERATURE INTEGER)");
 
     }
 
@@ -66,7 +59,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_MAIN);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME1);
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME2);
-        //db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME4);
         onCreate(db);
     }
 
