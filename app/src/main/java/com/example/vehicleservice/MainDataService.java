@@ -23,7 +23,16 @@ public class MainDataService extends Service {
                 intent1.putExtra("data", "Engine Full Charged");
                 sendBroadcast(intent1);
             }
-        }, 20000);
+        }, 25000);
+        new Handler().postDelayed(new Runnable() {
+            public void run() {
+                Intent intent1 = new Intent();
+                intent1.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+                intent1.setAction("com.example.vehicleservice");
+                intent1.putExtra("data", "Hello User! Today's Climate is Under Your Control");
+                sendBroadcast(intent1);
+            }
+        }, 5000);
 
         return mBinder;
 
