@@ -20,6 +20,7 @@ public class SeatHeaterTabDataService extends Service {
     /**
      * IAdd definition is below
      */
+
     private final ISeatHeaterTabDataInterface.Stub mBinder = new ISeatHeaterTabDataInterface.Stub() {
 
         @Override
@@ -106,6 +107,6 @@ public class SeatHeaterTabDataService extends Service {
             databaseHelper.insertSeatTabData(seatHeaterData);
             return num;
         }
-
     };
+
 }

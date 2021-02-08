@@ -8,7 +8,6 @@ public class SeatHeaterData {
     public String fourth_seat="Off";
     public String fifth_seat="Off";
 
-
     public String getDriver_seat() {
         return driver_seat;
     }
@@ -48,4 +47,5 @@ public class SeatHeaterData {
     public void setFifth_seat(String state) {
         fifth_seat = state;
     }
+
 }

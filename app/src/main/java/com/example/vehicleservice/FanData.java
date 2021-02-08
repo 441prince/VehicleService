@@ -9,7 +9,6 @@ public class FanData {
     public String rear_fan="Off";
     public int fan_speed;
 
-
     public String getAc_Direction() {
         return ac_direction;
     }
@@ -57,4 +56,5 @@ public class FanData {
     public void setFan_Speed(int speed) {
         fan_speed = speed;
     }
+
 }

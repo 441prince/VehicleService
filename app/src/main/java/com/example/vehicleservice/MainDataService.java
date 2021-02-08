@@ -189,8 +189,6 @@ public class MainDataService extends Service {
             return num;
 
         }
-
-
     };
 
 }

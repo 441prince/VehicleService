@@ -39,7 +39,7 @@ public class FanTabDataService extends Service {
         }
         public int feetDirectionButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
-            fandata.setAc_Direction("On");
+            fandata.setAc_Direction("To Feet On");
             databaseHelper.insertFanTabData(fandata);
             return num;
 
@@ -53,7 +53,7 @@ public class FanTabDataService extends Service {
         }
         public int faceFeetDirectionButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
-            fandata.setAc_Direction("On");
+            fandata.setAc_Direction("To Face and Feet On");
             databaseHelper.insertFanTabData(fandata);
             return num;
 
@@ -67,7 +67,7 @@ public class FanTabDataService extends Service {
         }
         public int faceFeetWindShieldDirectionButtonOn(int num) throws RemoteException {
             // TODO Auto-generated method stub
-            fandata.setAc_Direction("On");
+            fandata.setAc_Direction("To Face,Feet and WindShield On");
             databaseHelper.insertFanTabData(fandata);
             return num;
 
@@ -142,6 +142,6 @@ public class FanTabDataService extends Service {
             databaseHelper.insertFanTabData(fandata);
             return num;
         }
-
     };
+
 }

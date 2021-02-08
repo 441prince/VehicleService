@@ -2,7 +2,6 @@ package com.example.vehicleservice;
 
 public class MainData {
 
-
     private String auto ="Off";
     private String ac ="Off";
     private String left_seat="Off";
@@ -13,7 +12,6 @@ public class MainData {
     private String dog_mode="Off";
     private String camp_mode="Off";
     private String user_mode="Off";
-
 
     public String getAuto() {
         return auto;
@@ -94,4 +92,5 @@ public class MainData {
     public void setUser_mode(String state) {
         user_mode = state;
     }
+
 }

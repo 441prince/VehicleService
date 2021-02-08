@@ -17,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".MainDataService"
             android:process=":remote">
@@ -24,6 +25,7 @@
                 <action android:name="service.MainData" />
             </intent-filter>
         </service>
+
         <service
             android:name=".FanTabDataService"
             android:process=":remote">
@@ -31,6 +33,7 @@
                 <action android:name="service.FanTabData" />
             </intent-filter>
         </service>
+
         <service
             android:name=".SeatHeaterTabDataService"
             android:process=":remote">
@@ -38,6 +41,7 @@
                 <action android:name="service.SeatHeaterTabData" />
             </intent-filter>
         </service>
+
     </application>
 
 </manifest>
