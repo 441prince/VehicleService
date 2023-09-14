@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vehicleservice">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -10,7 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VehicleService">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,8 @@
 
         <service
             android:name=".MainDataService"
-            android:process=":remote">
+            android:process=":remote"
+            android:exported="true">
             <intent-filter>
                 <action android:name="service.MainData" />
             </intent-filter>
@@ -28,7 +29,8 @@
 
         <service
             android:name=".FanTabDataService"
-            android:process=":remote">
+            android:process=":remote"
+            android:exported="true">
             <intent-filter>
                 <action android:name="service.FanTabData" />
             </intent-filter>
@@ -36,7 +38,8 @@
 
         <service
             android:name=".SeatHeaterTabDataService"
-            android:process=":remote">
+            android:process=":remote"
+            android:exported="true">
             <intent-filter>
                 <action android:name="service.SeatHeaterTabData" />
             </intent-filter>

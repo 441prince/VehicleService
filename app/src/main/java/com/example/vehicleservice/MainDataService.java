@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.util.Log;
 
 public class MainDataService extends Service {
 
@@ -13,6 +14,7 @@ public class MainDataService extends Service {
 
     public IBinder onBind(Intent intent) {
         // TODO Auto-generated method stub
+        Log.d("VS MainDataService", "OnBind Called");
         this.mainData = new MainData();
         this.databaseHelper = new DatabaseHelper(this);
         new Handler().postDelayed(new Runnable() {
