@@ -12,6 +12,22 @@ public class MainDataService extends Service {
     private MainData mainData;
     private DatabaseHelper databaseHelper;
 
+    public MainDataService() {
+        Log.d("VS MainDataService"," Constructor");
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Log.d("VS MainDataService"," onCreate");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("VS MainDataService"," onDestroy");
+    }
+
     public IBinder onBind(Intent intent) {
         // TODO Auto-generated method stub
         Log.d("VS MainDataService", "OnBind Called");
@@ -36,6 +52,7 @@ public class MainDataService extends Service {
             }
         }, 5000);
 
+        //return new Test(this);
         return mBinder;
 
     }
